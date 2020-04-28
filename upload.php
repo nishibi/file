@@ -48,7 +48,7 @@ $imageAff = new FilesystemIterator('uploads/');
 
 foreach($imageAff as $upload){
     echo '<figure>';
-    echo '<img src="' . $upload->getPathname() . '" alt="">';
+    echo '<img src="' . $upload->getPathname() . '" alt=""><br>';
     echo '<figcation>' . $imageAff->getFilename() . '</figcation>';
     echo '</figure>';
 }
