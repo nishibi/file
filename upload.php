@@ -24,8 +24,8 @@
             $fileType = $_FILES["picture"]["type"][$key];
             $fileSize = $_FILES["picture"]["size"][$key];
             $fileTmp = $_FILES["picture"]["tmp_name"][$key];
-            $term = substr($fileType, -3);
-            if(in_array($term, $tableExt)) {
+            $extension = pathinfo($_FILES["picture"]["name"][$key], PATHINFO_EXTENSION);
+            if(in_array($extension, $tableExt)) {
                 $test = true;
                 if($fileSize < 1000000){
                     $testSize = 'true';
